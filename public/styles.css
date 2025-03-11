@@ -101,3 +101,38 @@ li {
     background: #ffb400;
 }
 
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: red;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Checkbox */
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Crossed-out tasks */
+.crossed-out {
+    text-decoration: line-through;
+    opacity: 0.6;
+}

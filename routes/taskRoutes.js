@@ -50,10 +50,10 @@ router.post("/", async (req, res) => {
 // UPDATE - Update a specific task
 router.put("/:id", async (req, res) => {
     try {
-        await Task.findByIdAndUpdate(req.params.id, req.body);
-        res.redirect("/tasks");
+        const updatedTask = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.json(updatedTask);
     } catch (err) {
-        res.status(500).send("Error updating task");
+        res.status(500).json({ error: "Error updating task" });
     }
 });
 
