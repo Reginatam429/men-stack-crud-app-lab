@@ -7,15 +7,13 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(express.static("public")); // Make sure your "public" folder exists
-app.set("view engine", "ejs");  // Set EJS as template engine
-app.use(express.urlencoded({ extended: true }));  // Body parser
+app.use(express.static("public")); 
+app.set("view engine", "ejs"); 
+app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-// Import Routes (Move this ABOVE `app.use("/tasks", taskRoutes)`)
+// Import Routes 
 const taskRoutes = require("./routes/taskRoutes");
-
-// Use Routes AFTER importing
 app.use("/tasks", taskRoutes);
 
 // Connecting to MongoDB
@@ -25,9 +23,9 @@ mongoose.connect(process.env.MONGO_URI, {
 }).then(() => console.log("MongoDB Connected to Student Cluster"))
     .catch(err => console.log(err));
 
-// Home Route
+// Redirect homepage to tasks list
 app.get("/", (req, res) => {
-    res.render("home");
+    res.redirect("/tasks");
 });
 
 // Start Server

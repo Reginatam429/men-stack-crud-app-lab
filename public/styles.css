@@ -1,83 +1,70 @@
-/* General Styling */
+/* Apply general styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', 'Patrick Hand', cursive, Arial, sans-serif;
     background-color: #f4f4f4;
-    text-align: center; 
+    text-align: center;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    height: 100vh; 
+    align-items: center;
 }
 
-/* Container to center block elements */
-.container {
-    width: 50%;
-    background: white;
+/* Sticky Note Effect */
+.nav, .container {
+    background-color: #fffb99; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Header */
-h1 {
-    color: #333;
-}
-
-/* Buttons */
-button, a.button {
-    display: inline-block;
-    background: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover, a.button:hover {
-    background: #45a049;
-}
-
-/* Forms */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-input, textarea, select {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /
+    max-width: 600px;
     width: 80%;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
 }
 
-/* Task List */
+/* Slight tilt */
+.container {
+    transform: rotate(-2deg);
+}
+
+/* Navigation bar */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    font-weight: bold;
+    transform: rotate(2deg);
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    background-color: #ffd700;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background-color: #ffcc00;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* Task list items */
 ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 li {
-    background: #fff;
+    background: #fff8b0;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 80%;
-}
-
-/* Footer */
-footer {
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #666;
 }
 
