@@ -1,7 +1,8 @@
 /* Apply general styles */
 body {
+    background: url("/background.png") no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Comic Sans MS', 'Patrick Hand', cursive, Arial, sans-serif;
-    background-color: #f4f4f4;
     text-align: center;
     margin: 0;
     padding: 0;
