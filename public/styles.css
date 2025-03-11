@@ -68,3 +68,35 @@ li {
     text-align: left;
 }
 
+/* Task Form */
+.task-form {
+    background-color: #fffa88;
+    padding: 15px;
+    margin-top: auto; /* Push the form to the bottom */
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-form input,
+.task-form textarea {
+    width: 80%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.task-form button {
+    background: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.task-form button:hover {
+    background: #ffb400;
+}
+

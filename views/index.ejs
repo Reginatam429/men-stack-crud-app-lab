@@ -8,8 +8,6 @@
 
     <div class="nav">
         <a href="/">🏠 Home</a>
-        <a href="/tasks">📋 View Tasks</a>
-        <a href="/tasks/new">➕ Add Task</a>
     </div>
 
     <div class="container">
@@ -32,6 +30,16 @@
                 <% }) %>
             </ul>
         <% } %>
+
+        <div class="task-form">
+            <h3>Add a New Task</h3>
+            <form action="/tasks" method="POST">
+                <input type="text" name="title" placeholder="Task title" required>
+                <textarea name="description" placeholder="Task description"></textarea>
+                <button type="submit">➕ Add Task</button>
+            </form>
+        </div>
+
     </div>
 
 </body>
